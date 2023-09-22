@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"
+      type="text/javascript"></script>
+    <script>
+      let mqtt=new Paho.MQTT.Client("broker.hivemq.com",8000,"client.js");
+      const onConnect=()=>{
+        alert("Connected")
+        mqtt.subscribe("IOTIF/RPI/DHT");
+      }
+      const onFailure=()=>{
+        alert("Something went wrong")
+      }
+      const onMessageArrived=(msg)=>{
+        const receivedData=msg.payloadString.split(',')
+        document.getElementById("temperature").innerHTML=receivedData[1];
+        document.getElementById("humidity").innerHTML=receivedData[0];
+      }
+      mqtt.connect({
+        timeout:3,
+        onSuccess:onConnect,
+        onFailure:onFailure
+      })
+      mqtt.onMMessageArrived=onMessageArrived
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Temperature</h1>
+      <p id="temperature">-</p>
+      <h1>Humidity</h1>
+      <p id="humidity">-</p>
+    </div>
+  </body>
+</html>
