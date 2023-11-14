@@ -1,0 +1,7 @@
+Procedure:
+1)Create an account in Figma
+2) After logging in click on “New Design File”
+3) A workspace like the following will appear
+4) Click on the “Frame Icon” and select Desktop and 
+   then select any desktop window from the given option Frame Icon
+5)Create a design for the user using the tools
