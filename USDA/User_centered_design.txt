@@ -1,1 +1,29 @@
 PROBLEM STATEMENT:
+New mums need a way to connect with other 
+mums because they are often at home alone during the day and feel isolated and alone.
+
+PROCEDURE:
+Design thinking is a non-linear, iterative process that teams use to understand users, challenge assumptions, 
+redefine problems and create innovative solutions to prototype and test. Design teams use design 
+thinking to tackle ill-defined/unknown problems (aka wicked problems) 
+because they can reframe these in human-centric ways and focus on what’s most important for users. 
+Storyboards, Journey Mapping, Wireframing, DesigningMockups, and User flows, 
+
+1) Empathize:
+   * Research your user's need.
+   * Set asside your own assumption and find the areas of pain for the customer
+   * Empathy Map: Says, Thinks, Does, Feels
+2) Define:
+   * State your user's needs and problems
+   * State your problem statement
+3) Ideate:
+   * Challenge assumptions and create Idea
+   * An app with a chat feature
+   * option to prioritise mental health
+4) Prototype:
+   * Start to create solutions
+   * Design the app with all features
+   * Identify the best possible solution and build it
+5) Test:
+   * Try your solutions
+   * One can return to previous stated and fix the errors
