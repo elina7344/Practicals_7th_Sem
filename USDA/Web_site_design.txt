@@ -1,0 +1,26 @@
+PROCEDURE:
+1) Determine your site's objectives
+2) Pinpoint your domain name
+3) Choose your website platform
+4) Select your theme/template
+5) create your site map/ wireframe
+6) write your website copy
+7) Design your website graphics
+8) Build your webpages
+9) Add Interactive Experience
+10) Launch your website
+
+THINGS TO WORK ON:
+1) table of contents
+2) SWOT Analysis
+   * Strenght
+   * Weakness
+   * Opportunity
+   * Threats
+3) Strategy and tactics
+4) Executive Summary
+5) KPIs:
+   * measurable metrics used to evaluate an organization's performance. 
+   * KPIs can be used to assess a company's strategic, financial, and operational achievements. 
+   * They can also be used to track revenue generation, customer acquisition, and conversion rates.
+6) Goals
