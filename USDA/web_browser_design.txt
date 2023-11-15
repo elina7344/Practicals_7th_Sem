@@ -1,0 +1,5 @@
+1) get programming friendly editor
+2) Bootstrap-your frontend framework
+3) Style Guide
+4) Chrome Developer Tools
+5) Keep track & manage with Usersnap
