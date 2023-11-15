@@ -1,0 +1,49 @@
+NEED FOR URL SHORTENING?
+ * 1/3rd of the real URL
+ * Saves space
+ * Less likely to make error while copying
+ * redirects to the same link
+
+REQUIREMENTS OF A SYSTEM?
+ * exact scope
+ * needs of the system
+ * functional, non functional, extended requirements
+
+CAPACITY ESTIMATION AND CONSTRAINTS:
+ * Traffic Est.
+ * Storage est.
+ * Bandwidth est.
+ * Memory est.
+ * High-level est.
+
+SYSTEM APIS?
+ * following are definitions for creating and deleting URLS:
+   * creatURL(api_dev_key, original_url, custom_alias=None, user_name=None, expire_date=None)
+   * deleteURL(api_dev_key, url_key)
+
+DATABASE DESIGN?
+ * two tables:
+   * storing URL mapping
+   * storing user's data who make the URL short link
+
+BASIC SYSTEM DESIGN AND ALGO?
+ * Encoding actual URL
+ * Generating keys offline
+
+DATA PARTITIONING AND REPLICATION:
+ * Range based partitioning 
+ * Hash based partitioning
+
+CACHE?
+ * Memchashe can store recent URLS in cashe memory which can be accessed before hitting the backend.
+
+LOAD BALANCER?
+ * b/w clients and application servers
+ * b/w application and database servers
+ * b/w application Servers and cache servers
+
+DB CLEANUP/ PURGING
+
+TELEMTRY
+
+SECURITY AND PERMISSIONS
