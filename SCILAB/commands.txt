@@ -1,0 +1,23 @@
+//General commands:
+Help: help menu for scilab commands
+Who: list all the var from var browser window
+Whos: list var with byte size and type 
+clc: clears command window
+clear: removes var from memory
+Quit: close the session
+Ls: list the files
+Pwd: present working directory
+cd: change directory
+mkdir: create new directory
+
+//special variable commands
+%pi=3.14
+%e=2.718
+%eps=epsilon
+%inf=infinity
+
+//Basic scalar and vector operations
+Y=[1 4 6]//row vector
+X=[1 2 3 ; 4 5 6 ; 7 8 9]//3x3 matrix
+size(Y)//size of Y
+Y'//transpose
