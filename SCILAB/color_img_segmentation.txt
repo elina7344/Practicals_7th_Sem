@@ -1,0 +1,14 @@
+RGB = imread('E:\SEM 7\IWUS\tomatoes.jpg');
+imshow(RGB) = gcf();f.name='Color Image';
+Image = rgb2gray(RGB);
+imshow(Image);
+f=gcf();f.name='Gray Level Image';
+imshow(Image,jetcolormap(256))
+f=gcf();
+f.name='Pseudo Color Image';
+imshow(Image);
+imshow(Image)
+imshow(Image,jetcolormap(256))
+Histogram=imhist(Image);
+figure();plot(0:255, 'Histogram')
+xgrid(color('black'),1,8)
