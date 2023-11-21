@@ -1,0 +1,54 @@
+//Low Pass Filtering
+clc ;
+clear ;
+xdel=winsid();
+fc = input("Enter Analog cutoff freq . in Hz=") // 250
+fs = input ("Enter Analog sampling freq. in HZ=") //2000
+M = input ("Enter order of filter =") // 4
+w = (2* %pi ) *( fc / fs ) ;
+disp (w , 'Digital cutoff frequency in radians.cycles/samples' ) ;
+wc = w/%pi;
+disp ( wc , 'Normalised digital cutoff frequency in cucles/samples');
+[ wft , wfm , fr ]= wfir ( 'lp' ,M +1 ,[ wc /2 ,0] , 're' ,[0 ,0]);
+disp ( wft , 'Impulse Response of LPF FIR Filter:h[n]=');
+subplot (2 ,1 ,1)
+plot (2*fr , wfm )
+xlabel ( 'Normalised Digital Frequency w-->' )
+ylabel ( 'Magnitude |H(w)|=')
+title ( 'Magnitude Response of FIR LPF' )
+xgrid (1)
+subplot (2 ,1 ,2)
+plot ( fr * fs , wfm )
+xlabel ( 'Analog Frequency in HZ f-->' )
+ylabel ( 'Magnitude |H(w)|= ')
+title ('Magnitude Response of FIR LPF')
+xgrid (1)
+
+
+//Spatial filtering
+clear;
+close;
+I=imread("E:\SEM 7\IWUS\rose.jpeg");
+I_noise=imnoise(I,'salt & pepper',0.03);
+figure
+imshow(I)
+figure;
+imshow(I_noise);
+F_Linear1=1/25*ones(5,5);
+I_linear1=imfilter(I_noise,F_Linear1);
+figure
+imshow(I_linear1);
+hsize=[5,5];
+sigma=1;
+F_Linear2=fspecial('gaussian',hsize,sigma);
+I_linear2=imfilter(I_noise,F_Linear2);
+figure
+imshow(I_linear2);
+F_NonLinear=[3,3];
+[m,n]=size(I);
+for i=2:m-1
+    for j=2:n-1
+        d(i,j)=median([I(i-1,j+1),I(i,j+1),I(i+1,j+1);I(i-1,j),I(i,j),I(i+1,j);I(i-1,j-1),I(i,j-1),I(i+1,j-1)]);
+    end
+end
+imshow(d)
