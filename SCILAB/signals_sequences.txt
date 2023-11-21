@@ -1,0 +1,119 @@
+//unit impulse
+close ;
+clear all;
+clc;
+t=-5:1:5;
+a=[zeros(1,5) 1 zeros(1,5)];
+k=input('enter the amplitude');
+b=k*a;
+subplot(2,1,1);
+plot2d(t,b);
+xtitle('impulse response', 'amplitude', 'time');
+subplot(2,1,2);
+plot2d3(t,b);
+xtitle('impulse response', 'amplitude', 'time');
+
+
+//step sequence
+close;
+clear all;
+clc;
+t=-5:1:5;
+a=4*[zeros(1,5)ones(1,6)];
+plot2d3(t,a);
+xtitle('step response', 'amplitude', 'time');
+
+
+//ramp waveform
+close;
+clear all;
+clc;
+t=0:1:50;
+for n=0:50
+    x(n+1)=n;
+end
+plot2d(t,x);
+xtitle('step response', 'amplitude', 'time');
+
+
+//sawtooth
+close;
+clc;
+p=100;
+t=1:1:p*10;
+for n=1:(p/2)
+ a(n)=n;
+end
+for n=(p/2)+1:p
+    a(n)=n-p;
+end
+a1=a
+for i=1:9
+    a1=[a1 a];
+end
+plot2d(t,a1);
+axis([ 0 1000 -100 100]);
+xtitle('sawtooth sequence', 'amplitude', 'time');
+
+
+//square waveform
+close ;
+clear all;
+clc;
+t=(0:0.1:5*%pi)';
+plot2d(1.5*%pi*squarewave(t))
+xtitle('square wave','time','amplitude');
+
+
+//Triangular waveform
+clc ;
+close ;
+clear ;
+Fs = 20; // s am pl e s p e r s e c o n d
+t_total = 100; // s e c o n d s
+n_samples = Fs * t_total ;
+t = linspace (0 , t_total , n_samples ) ;
+f =40; // sound f r e q u e n c y
+tri_wave =(2/ %pi )* asin ( sin (2* %pi * f * t ) );
+subplot (2 ,2 ,1) ;
+plot (t , tri_wave ) ;
+xlabel ( '−−−−−−−−−−>Time Index t (sec.)') ;
+ylabel ( '−−−−−−−−−−−>Amplitude' ) ;
+title ( 'Triangular Wave Signal') ;
+Fs = 20; // s am pl e s p e r s e c o n d
+t_total = 10; // s e c o n d s
+n_samples = Fs * t_total ;
+n = linspace (0 , t_total , n_samples ) ;
+f =40; // sound f r e q u e n c y
+tri_wave =(2/ %pi )* asin ( sin (2* %pi * f * n ) );
+subplot (2 ,2 ,2) ;
+plot2d3 (n , tri_wave ) ;
+xlabel ( '−−−−−−−−−−>Time Index t ( sec.)') ;
+ylabel ( '−−−−−−−−−−−>Amplitude ' ) ;
+title ( 'Triangular Wave Sequence' ) ;
+
+
+//SINE AND COSINE WAVES
+close ;
+clear all;
+clc;
+n=0:0.1:2*%pi;
+x=sin(n);
+subplot(211);
+plot2d(n,x);
+xtitle('sine wave', 'time','amplitude');
+y=cos(n);
+subplot(212);
+plot2d(n,y);
+xtitle('cos wave', 'time','amplitude');
+
+
+//sinc function
+close;
+clear all;
+clc;
+t=-20:0.01:20;
+x=sinc(t);
+subplot(211);
+plot2d(t,x);
+xtitle('sinc waveform','time','amplitude');
